@@ -92,6 +92,7 @@ function Projects() {
     const [loading, setLoading] = useState(true)
     const [error, setError] = useState(null)
     const [activeIndex, setActiveIndex] = useState(0)
+    const [scrollRange, setScrollRange] = useState(0)
 
     // Fetch ALL repos from GitHub API with automatic README image extraction
     useEffect(() => {
@@ -254,10 +255,27 @@ function Projects() {
         return unsubscribe
     }, [currentIndex, cardCount])
 
-    // Transform: scroll horizontally as user scrolls vertically
-    // DYNAMIC FORMULA: Using 16% per card to show last repo fully
-    const scrollEndPercent = cardCount > 1 ? cardCount * 14.2 : 0
-    const x = useTransform(scrollYProgress, [0, 1], ['0%', `-${scrollEndPercent}%`])
+    // DYNAMIC: Calculate total scrollable distance based on actual content width
+    useEffect(() => {
+        if (sliderRef.current) {
+            const updateScrollRange = () => {
+                const totalWidth = sliderRef.current.scrollWidth
+                const visibleWidth = sliderRef.current.clientWidth
+                // Add buffer to ensure last item is fully cleared
+                const buffer = 100
+                setScrollRange(Math.max(0, totalWidth - visibleWidth + buffer))
+            }
+
+            // Initial calculation
+            updateScrollRange()
+
+            // Recalculate on window resize
+            window.addEventListener('resize', updateScrollRange)
+            return () => window.removeEventListener('resize', updateScrollRange)
+        }
+    }, [repos]) // Also recalculate when projects are loaded
+
+    const x = useTransform(scrollYProgress, [0, 1], ['0px', `-${scrollRange}px`])
 
     return (
         <section id="projects" className={styles.projectsWrapper} ref={containerRef}>
