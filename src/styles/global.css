@@ -173,6 +173,7 @@ a {
   border: 2px solid var(--primary);
   position: relative;
   overflow: hidden;
+  z-index: 1;
 }
 
 .btn-primary::before {
@@ -187,25 +188,34 @@ a {
   z-index: -1;
 }
 
-.btn-primary:hover {
-  color: var(--bg-dark);
-  box-shadow: var(--glow-primary);
+@media (hover: hover) {
+  .btn-primary:hover {
+    color: var(--bg-dark);
+    box-shadow: var(--glow-primary);
+  }
+
+  .btn-primary:hover::before {
+    left: 0;
+  }
+
+  .btn-secondary:hover {
+    border-color: var(--secondary);
+    color: var(--secondary);
+    box-shadow: var(--glow-secondary);
+  }
 }
 
-.btn-primary:hover::before {
+/* Active states for both mobile and desktop */
+.btn-primary:active {
+  color: var(--bg-dark);
+  box-shadow: none;
+}
+.btn-primary:active::before {
   left: 0;
 }
-
-.btn-secondary {
-  background: transparent;
-  color: var(--text-primary);
-  border: 1px solid var(--border-color);
-}
-
-.btn-secondary:hover {
+.btn-secondary:active {
   border-color: var(--secondary);
   color: var(--secondary);
-  box-shadow: var(--glow-secondary);
 }
 
 /* Scrollbar */
