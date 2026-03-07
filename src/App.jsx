@@ -1,4 +1,4 @@
-import { useState, lazy, Suspense } from 'react'
+import { useState, useEffect, lazy, Suspense } from 'react'
 import Intro from './components/Intro/Intro'
 import Navbar from './components/Navbar/Navbar'
 import Hero from './components/Hero/Hero'
@@ -15,6 +15,21 @@ const Footer = lazy(() => import('./components/Footer/Footer'))
 
 function App() {
     const [introComplete, setIntroComplete] = useState(false)
+
+    // Handle hash-based URL navigation after intro + lazy load complete
+    useEffect(() => {
+        if (introComplete && window.location.hash) {
+            // Delay to ensure lazy-loaded components have rendered
+            const timer = setTimeout(() => {
+                const id = window.location.hash.substring(1)
+                const element = document.getElementById(id)
+                if (element) {
+                    element.scrollIntoView({ behavior: 'smooth' })
+                }
+            }, 500)
+            return () => clearTimeout(timer)
+        }
+    }, [introComplete])
 
     return (
         <div className={styles.app}>

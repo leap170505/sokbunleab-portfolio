@@ -141,7 +141,7 @@ const AchievementCarousel = () => {
     }
 
     return (
-        <section className={styles.carouselSection}>
+        <section id="achievements" className={styles.carouselSection}>
             <div className={styles.container}>
                 <motion.h2
                     className={styles.sectionTitle}
