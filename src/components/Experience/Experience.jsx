@@ -50,53 +50,75 @@ const CloseIcon = () => (
 const experiences = [
     {
         id: 0,
-        role: "Cybersecurity Intern",
-        company: "Learnflu",
-        date: "Jan 2025 - May 2025",
-        skills: ["Defensive Security", "Threat Intelligence", "SOC Analysis", "Incident Response"],
-        image: "/images/Karthigaiselvam RLearnflu.png",
-        icon: <Briefcase />,
-        color: '#ffaa00'
-    },
-    {
-        id: 1,
-        role: "Cybersecurity Virtual Intern",
-        company: "Palo Alto Networks",
-        date: "Jul 2024 – Sep 2024",
-        skills: ["Network Security", "Cloud Security", "SOC", "Prisma Cloud"],
-        link: "https://www.linkedin.com/posts/karthigaiselvam-r-7b9197258_cybersecurity-paloaltonetworks-virtualinternship-activity-7251896001270042624-LQEE",
-        icon: <Shield />,
+        role: "Flutter Developer",
+        company: "Bike Rental App - School Project",
+        date: "Mar - Apr 2026",
+        skills: ["Flutter", "Provider", "MVVM", "Firebase", "Figma"],
+        icon: <Code />,
         color: '#00ff88'
     },
     {
-        id: 2,
-        role: "Cyber Security Project Lead",
-        company: "RecuritNxt Technologies",
-        date: "Nov 2023 – May 2024",
-        skills: ["Project Management", "VAPT", "Team Leadership"],
-        link: "https://www.linkedin.com/posts/karthigaiselvam-r-7b9197258_cybersecurity-projectmanagement-teamwork-activity-7240375012514275330-64AV",
-        icon: <Target />,
+        id: 1,
+        role: "Front-End Developer & QA Testing",
+        company: "Codify - Capstone Project",
+        date: "Oct 2025 - Present",
+        skills: ["React", "TypeScript", "NestJS", "Agile Scrum"],
+        icon: <Shield />,
         color: '#00d4ff'
     },
     {
+        id: 2,
+        role: "Flutter Developer",
+        company: "Smart Goal Breakdown App - School Project",
+        date: "Dec 2025",
+        skills: ["Flutter", "Dart", "State Management", "Local Storage"],
+        icon: <Code />,
+        color: '#ffaa00'
+    },
+    {
         id: 3,
-        role: "Android Penetration Tester",
-        company: "THECYBERHOST Pvt. Ltd.",
-        date: "Aug 2023 – Sep 2023",
-        skills: ["MobSF", "Burp Suite", "ADB"],
-        link: "https://www.linkedin.com/posts/karthigaiselvam-r-7b9197258_android-cybersecurity-vapt-activity-7240356634386931712-h20e",
-        icon: <Shield />,
+        role: "Flutter Developer",
+        company: "Hospital Management System - School Project",
+        date: "Oct - Nov 2025",
+        skills: ["Dart", "OOP", "UI/UX", "Database"],
+        icon: <Briefcase />,
         color: '#bd00ff'
     },
     {
         id: 4,
-        role: "Software Developer",
-        company: "AirosSpace R&D Pvt. Ltd.",
-        date: "Mar 2023 – Jun 2023",
-        skills: ["Python", "C++", "Qt6/QML"],
-        link: "https://www.linkedin.com/posts/karthigaiselvam-r-7b9197258_airospace-softwaredevelopment-qt-activity-7240355243736113152-v9ce",
+        role: "Front-End Developer",
+        company: "Sastra - Next-Gen Project",
+        date: "Aug 2025",
+        skills: ["Next.js", "Next Auth", "Role-based Access"],
         icon: <Code />,
         color: '#ff6b6b'
+    },
+    {
+        id: 5,
+        role: "Full-Stack Developer",
+        company: "Gym Management System - School Project",
+        date: "Jun - Jul 2025",
+        skills: ["React", "Node.js", "Express", "MySQL", "JWT"],
+        icon: <Code />,
+        color: '#4ecdc4'
+    },
+    {
+        id: 6,
+        role: "Database Developer",
+        company: "Software Market-Place System - School Project",
+        date: "Jul 2025",
+        skills: ["MySQL", "DDL/DML/DQL", "DCL", "RBAC"],
+        icon: <Target />,
+        color: '#ffe66d'
+    },
+    {
+        id: 7,
+        role: "Java Developer",
+        company: "Airline Management System - School Project",
+        date: "Feb - May 2025",
+        skills: ["Java", "OOP", "Modular Design"],
+        icon: <Code />,
+        color: '#ff9ff3'
     }
 ]
 

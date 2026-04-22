@@ -11,55 +11,51 @@ const Fingerprint = () => (
 // Skill Data Structure
 const skillData = {
     id: 'core',
-    label: 'Karthigaiselvam',
+    label: 'Bunleab',
     type: 'core',
     children: [
         {
-            id: 'security',
-            label: 'Cyber Security',
+            id: 'mobile',
+            label: 'Mobile Dev',
             type: 'category',
             color: '#00ff88',
             children: [
-                { id: 'pentest', label: 'Pentesting', type: 'skill' },
-                { id: 'websec', label: 'Web App Security', type: 'skill' },
-                { id: 'network', label: 'Network Security', type: 'skill' },
-                { id: 'malware', label: 'Malware Analysis', type: 'skill' },
-                { id: 'reveng', label: 'Reverse Engineering', type: 'skill' },
-                { id: 'burp', label: 'Burp Suite', type: 'skill' },
-                { id: 'meta', label: 'Metasploit', type: 'skill' },
-                { id: 'nmap', label: 'Nmap', type: 'skill' },
-                { id: 'wireshark', label: 'Wireshark', type: 'skill' },
-                { id: 'nessus', label: 'Nessus', type: 'skill' },
+                { id: 'flutter', label: 'Flutter', type: 'skill' },
+                { id: 'dart', label: 'Dart', type: 'skill' },
+                { id: 'java', label: 'Java', type: 'skill' },
+                { id: 'provider', label: 'Provider', type: 'skill' },
+                { id: 'mvvm', label: 'MVVM', type: 'skill' },
+                { id: 'state', label: 'State Mgmt', type: 'skill' },
             ]
         },
         {
-            id: 'dev',
-            label: 'Development',
+            id: 'web',
+            label: 'Web Dev',
             type: 'category',
             color: '#00d4ff',
             children: [
-                { id: 'python', label: 'Python', type: 'skill' },
-                { id: 'cpp', label: 'C++', type: 'skill' },
-                { id: 'go', label: 'Go', type: 'skill' },
-                { id: 'bash', label: 'Bash', type: 'skill' },
+                { id: 'html', label: 'HTML/CSS', type: 'skill' },
                 { id: 'js', label: 'JavaScript', type: 'skill' },
+                { id: 'ts', label: 'TypeScript', type: 'skill' },
                 { id: 'react', label: 'React', type: 'skill' },
+                { id: 'next', label: 'Next.js', type: 'skill' },
                 { id: 'node', label: 'Node.js', type: 'skill' },
-                { id: 'sql', label: 'SQL', type: 'skill' },
-                { id: 'solidity', label: 'Solidity', type: 'skill' },
+                { id: 'express', label: 'Express', type: 'skill' },
+                { id: 'nest', label: 'NestJS', type: 'skill' },
             ]
         },
         {
-            id: 'ops',
-            label: 'Ops & Tools',
+            id: 'tools',
+            label: 'Database & Tools',
             type: 'category',
             color: '#bd00ff',
             children: [
-                { id: 'linux', label: 'Linux', type: 'skill' },
+                { id: 'mysql', label: 'MySQL', type: 'skill' },
+                { id: 'firebase', label: 'Firebase', type: 'skill' },
                 { id: 'git', label: 'Git', type: 'skill' },
-                { id: 'docker', label: 'Docker', type: 'skill' },
-                { id: 'risk', label: 'Risk Management', type: 'skill' },
-                { id: 'incident', label: 'Incident Response', type: 'skill' },
+                { id: 'figma', label: 'Figma', type: 'skill' },
+                { id: 'jira', label: 'Jira', type: 'skill' },
+                { id: 'scrum', label: 'Scrum', type: 'skill' },
             ]
         }
     ]

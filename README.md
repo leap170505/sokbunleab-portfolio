@@ -1,14 +1,14 @@
-# 🔐 Karthigaiselvam R - Portfolio
+# 📱 Sok Bunleab - Portfolio
 
-> **Security Researcher & Software Developer**  
-> *Exploring the intersection of secure infrastructure and modern web experiences.*
+> **Mobile Developer & Web Developer& Software Engineering Student**
+> *Exploring the intersection of mobile development and modern web experiences.*
 
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 ![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
 ![Framer Motion](https://img.shields.io/badge/Framer_Motion-0055FF?style=for-the-badge&logo=framer&logoColor=white)
-![Cyber Security](https://img.shields.io/badge/Theme-Cyber_Security-00ff88?style=for-the-badge&logoColor=black)
+![Flutter](https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white)
 
-A highly interactive, cyber-security themed portfolio website built to showcase penetration testing achievements, software development projects, and professional experience.
+A highly interactive portfolio website built to showcase mobile development achievements, front-end software development projects, and professional experience.
 
 ---
 
@@ -36,16 +36,15 @@ A highly interactive, cyber-security themed portfolio website built to showcase 
 
 ## ✨ Key Features
 
-- **🎨 Cyber Aesthetic**: Custom neon design system with glassmorphism, matrix rain, and glitch effects.
+- **🎨 Modern Aesthetic**: Custom neon design system with glassmorphism and dynamic effects.
 - **📱 Responsive Design**: Fully optimized for Desktop, Laptop, Tablet, and Mobile devices.
-- **✉️ Secure Contact Form**: 
-    - Integrated with **EmailJS** for serverless, secure email delivery.
-    - Custom **Toast Notification System** for real-time user feedback.
-    - Rate limiting and input validation.
+- **✉️ Secure Contact Form**:
+  - Integrated with **EmailJS** for serverless, secure email delivery.
+  - Custom **Toast Notification System** for real-time user feedback.
 - **🏗️ Dynamic Architecture**:
-    - **Experience Timeline**: Vertical interactive timeline connecting internships to LinkedIn posts.
-    - **Achievement Carousel**: Auto-playing image gallery for hackathon wins and certifications.
-    - **Project Hub**: GitHub API integration to fetch and display live repository statistics.
+  - **Experience Timeline**: Vertical interactive timeline connecting academic and industry projects.
+  - **Achievement Carousel**: Auto-playing image gallery for certifications and event participations.
+  - **Project Hub**: GitHub API integration to fetch and display live repository statistics.
 
 ## 🛠️ Tech Stack
 
@@ -59,22 +58,25 @@ A highly interactive, cyber-security themed portfolio website built to showcase 
 ## 🚀 Quick Start
 
 1. **Clone the repository**
-   ```bash
-   git clone https://github.com/Karthigaiselvam-R-official/Karthigaiselvam-dev.git
-   ```
 
-2. **Install dependencies**
    ```bash
-   cd Karthigaiselvam-dev
+   git clone https://github.com/leap170505/portfolio.git
+   ```
+2. **Install dependencies**
+
+   ```bash
+   cd portfolio
    npm install
    ```
+3. **Environment Setup**
+   Create a `.env` file based on `.env.example` to set up EmailJS and GitHub configuration.
+4. **Start local server**
 
-3. **Start local server**
    ```bash
    npm run dev
    ```
+5. **Build for production**
 
-4. **Build for production**
    ```bash
    npm run build
    ```
@@ -84,29 +86,24 @@ A highly interactive, cyber-security themed portfolio website built to showcase 
 ```bash
 src/
 ├── components/
-│   ├── Navbar/       # Responsive navigation with 'terminal' style
+│   ├── Navbar/       # Responsive navigation
 │   ├── Hero/         # 3D interactive landing section
-│   ├── About/        # Profile & Achievements with Carousel
+│   ├── About/        # Profile & Bio
 │   ├── Experience/   # Vertical Professional Timeline
 │   ├── Projects/     # GitHub API integrated project cards
 │   ├── Contact/      # EmailJS form with validation
 │   └── Toast/        # Custom notification system
 ├── styles/
-│   └── global.css    # Cyber-theme variables & animations
+│   └── global.css    # Theme variables & animations
 └── main.jsx          # Entry point
 ```
 
 ## 📧 Contact Configuration
 
-To make the contact form work in your own fork:
+To make the contact form work:
 
 1. Create an account on [EmailJS](https://www.emailjs.com/).
 2. Create a standardized email template.
-3. Update specific keys in `src/components/Contact/Contact.jsx` or use Environment Variables.
+3. Update the `.env` file with your specific `VITE_EMAILJS_SERVICE_ID`, `VITE_EMAILJS_TEMPLATE_ID`, and `VITE_EMAILJS_PUBLIC_KEY`.
 
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-*Built with 💚 and 💻 by [Karthigaiselvam R](https://github.com/Karthigaiselvam-R-official)*
+*Built with 💚 and 💻 by [Sok Bunleab](https://github.com/leap170505)*

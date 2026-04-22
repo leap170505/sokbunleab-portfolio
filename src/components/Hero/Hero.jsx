@@ -31,31 +31,14 @@ const Lock = () => (
 
 // Typewriter effect for roles
 const roles = [
-    "Security Researcher",
-    "Penetration Tester",
-    "Software Developer",
-    "Cyber Security Enthusiast",
+    "Flutter Developer",
+    "Front-End Developer",
+    "Software Engineering Student",
 ]
 
 // Dynamic hero quotes - randomly selected on page load
 const heroQuotes = [
-    `Developer by day, security researcher by obsession. I create elegant software while constantly questioning: "How could this be exploited?" — then I fix it before anyone else finds out.`,
-
-    `The best defense is knowing how to attack. I build software that creates — and break systems to understand their limits. A Security Researcher who codes with purpose and a Developer who thinks like an adversary.`,
-
-    `Code is poetry. Security is its shield. Crafting digital experiences that inspire confidence. I blend the art of software creation with the science of security — because great software deserves to be unbreakable.`,
-
-    `Heroes don't wait for vulnerabilities to be exploited. From the first line of code to the final deployment — I build with security in mind, defend with developer expertise, and protect what matters.`,
-
-    `In a world of vulnerabilities, I choose to be the solution. Driven by curiosity, guided by precision. I transform ideas into resilient applications and challenges into opportunities for better security.`,
-
-    `Every vulnerability I find today protects someone tomorrow. Born from curiosity, shaped by code. I'm a developer who asks "what if?" and a security researcher who answers "not on my watch."`,
-
-    `The line between creation and destruction is thin — I walk it with intention. Building systems that scale. Breaking assumptions that don't. A developer's heart with a hacker's instinct. Where innovation meets vigilance, that's where you'll find me.`,
-
-    `Some dream of a safer internet. I'm building it — one secure application at a time. Code is my canvas. Security is my signature. Together, they create experiences worth protecting.`,
-
-    `I am two minds in one — the builder who dreams and the breaker who tests those dreams. Developer, Researcher. Both voices in harmony. Building software that doesn't just run — it survives.`
+    `I am a motivated individual with a strong interest in software development. I have a solid foundation in software development and I am eager to contribute to real-world projects while continuously improving my technical and problem-solving skills.`,
 ]
 
 // ============================================
@@ -70,17 +53,17 @@ const HoloTerminal = () => {
     const [showCursor, setShowCursor] = useState(true)
 
     const codeLines = [
-        { text: '> Initializing security scan...', color: '#888', delay: 0 },
-        { text: '> Target: Karthigaiselvam.dev', color: '#00ff88', delay: 100 },
+        { text: '> Initializing dev environment...', color: '#888', delay: 0 },
+        { text: '> Target: SokBunleab.dev', color: '#00ff88', delay: 100 },
         { text: '', color: '#fff', delay: 50 },
-        { text: 'class SecurityResearcher:', color: '#ff79c6', delay: 80 },
+        { text: 'class WebDeveloper:', color: '#ff79c6', delay: 80 },
         { text: '    def __init__(self):', color: '#8be9fd', delay: 80 },
-        { text: '        self.name = "Karthigaiselvam"', color: '#f1fa8c', delay: 60 },
-        { text: '        self.role = "Security Researcher"', color: '#f1fa8c', delay: 60 },
-        { text: '        self.status = "ACTIVE"', color: '#50fa7b', delay: 60 },
+        { text: '        self.name = "Sok Bunleab"', color: '#f1fa8c', delay: 60 },
+        { text: '        self.role = "Flutter Developer Intern"', color: '#f1fa8c', delay: 60 },
+        { text: '        self.status = "OPEN TO INTERNSHIP"', color: '#50fa7b', delay: 60 },
         { text: '', color: '#fff', delay: 50 },
-        { text: '> Scan complete. No vulnerabilities found.', color: '#00ff88', delay: 100 },
-        { text: '> System secured ✓', color: '#50fa7b', delay: 150 },
+        { text: '> Stack loaded. Ready to build.', color: '#00ff88', delay: 100 },
+        { text: '> System ready ✓', color: '#50fa7b', delay: 150 },
     ]
 
     // Cursor blink
@@ -176,8 +159,8 @@ const HoloTerminal = () => {
                 <span className={styles.holoFooterItem}>
                     <span className={styles.pulsingDot} /> CONNECTED
                 </span>
-                <span className={styles.holoFooterItem}>ENCRYPTION: AES-256</span>
-                <span className={styles.holoFooterItem}>FIREWALL: ACTIVE</span>
+                <span className={styles.holoFooterItem}>STACK: FLUTTER/REACT</span>
+                <span className={styles.holoFooterItem}>STATUS: INTERNSHIP</span>
             </div>
         </div>
     )
@@ -276,7 +259,27 @@ function Hero() {
     const [roleIndex, setRoleIndex] = useState(0)
     const [displayText, setDisplayText] = useState('')
     const [isDeleting, setIsDeleting] = useState(false)
-    const [githubStats, setGithubStats] = useState({ repos: 0, stars: 0 })
+    const [githubStats, setGithubStats] = useState({ repos: 0 })
+
+    // Fetch GitHub stats
+    useEffect(() => {
+        const fetchGitHubStats = async () => {
+            try {
+                const token = import.meta.env.VITE_GITHUB_TOKEN
+                const headers = { 'Accept': 'application/vnd.github.v3+json' }
+                if (token) headers['Authorization'] = `token ${token}`
+
+                const response = await fetch('https://api.github.com/users/leap170505', { headers })
+                if (response.ok) {
+                    const data = await response.json()
+                    setGithubStats({ repos: data.public_repos })
+                }
+            } catch (err) {
+                console.error('Error fetching GitHub stats:', err)
+            }
+        }
+        fetchGitHubStats()
+    }, [])
 
     // Random quote selected once on page load
     const [quoteIndex] = useState(() => Math.floor(Math.random() * heroQuotes.length))
@@ -308,36 +311,10 @@ function Hero() {
         }
     }, [typedQuote, quoteIndex, typingStarted])
 
-    const firstName = "Karthigaiselvam"
-    const lastName = "R"
+    const firstName = "Sok"
+    const lastName = "Bunleab"
 
-    // Fetch GitHub stats
-    useEffect(() => {
-        const fetchGitHubStats = async () => {
-            try {
-                // Use Token if available to avoid Rate Limits (60 vs 5000 req/hr)
-                const token = import.meta.env.VITE_GITHUB_TOKEN
-                const headers = {
-                    'Accept': 'application/vnd.github.v3+json'
-                }
-                if (token) {
-                    headers['Authorization'] = `token ${token}`
-                }
 
-                const response = await fetch('https://api.github.com/users/Karthigaiselvam-R-official', { headers })
-
-                if (response.ok) {
-                    const data = await response.json()
-                    setGithubStats(prev => ({ ...prev, repos: data.public_repos }))
-                } else {
-                    console.error('GitHub API Error:', response.status)
-                }
-            } catch (err) {
-                console.error('Error fetching GitHub stats:', err)
-            }
-        }
-        fetchGitHubStats()
-    }, [])
 
     useEffect(() => {
         const currentRole = roles[roleIndex]
@@ -388,7 +365,7 @@ function Hero() {
                         transition={{ delay: 0.2 }}
                     >
                         <span className={styles.statusDot}></span>
-                        <span>Available for Work</span>
+                        <span>Available for Internship</span>
                     </motion.div>
 
                     {/* Name */}
@@ -475,17 +452,17 @@ function Hero() {
                         transition={{ delay: 1.2 }}
                     >
                         <div className={styles.stat}>
-                            <span className={styles.statNumber}>9.05</span>
-                            <span className={styles.statLabel}>CGPA</span>
+                            <span className={styles.statNumber}>7+</span>
+                            <span className={styles.statLabel}>Projects</span>
                         </div>
                         <div className={styles.statDivider}></div>
                         <div className={styles.stat}>
-                            <span className={styles.statNumber}>990+</span>
-                            <span className={styles.statLabel}>LeetCode</span>
+                            <span className={styles.statNumber}>4+</span>
+                            <span className={styles.statLabel}>Tech Stacks</span>
                         </div>
                         <div className={styles.statDivider}></div>
                         <div className={styles.stat}>
-                            <span className={styles.statNumber}>{githubStats.repos || '17'}+</span>
+                            <span className={styles.statNumber}>{githubStats.repos || '—'}</span>
                             <span className={styles.statLabel}>GitHub Repos</span>
                         </div>
                     </motion.div>
@@ -516,7 +493,7 @@ function Hero() {
                         animate={{ y: [0, -3, 0] }}
                         transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
                     >
-                        $ nmap -sV
+                        $ npm run dev
                     </motion.div>
 
                     <motion.div
@@ -525,7 +502,7 @@ function Hero() {
                         animate={{ y: [0, 3, 0] }}
                         transition={{ repeat: Infinity, duration: 5, ease: "easeInOut" }}
                     >
-                        $ sudo ./exploit
+                        $ flutter run
                     </motion.div>
 
                     {/* Port Badge - Left Side */}
@@ -536,13 +513,11 @@ function Hero() {
                         transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }}
                     >
                         <span className={styles.portLabel}>PORT</span>
-                        <span className={styles.portNumber}>443</span>
+                        <span className={styles.portNumber}>3000</span>
                         <span className={styles.portStatus}>OPEN</span>
                     </motion.div>
 
-
-
-                    {/* CVE Badge */}
+                    {/* CVE Badge → replaced with CADT badge */}
                     <motion.div
                         className={styles.cveBadge}
                         animate={{
@@ -555,12 +530,11 @@ function Hero() {
                         }}
                         transition={{ repeat: Infinity, duration: 3 }}
                     >
-                        <span className={styles.cveText}>CVE-2026</span>
+                        <span className={styles.cveText}>CADT 2024</span>
                     </motion.div>
 
                     {/* Circuit Lines */}
                     <svg className={styles.circuitLines} viewBox="0 0 100 100">
-
                         <motion.circle
                             cx="180"
                             cy="-5"

@@ -44,20 +44,20 @@ const Download = () => (
 const highlights = [
     {
         icon: <Target />,
-        title: 'Problem Solver',
-        description: '990+ LeetCode problems solved',
+        title: 'Mobile Developer',
+        description: 'Flutter, Dart, Java',
         color: 'primary'
     },
     {
         icon: <Shield />,
-        title: 'Security Expert',
-        description: 'Pen testing & vulnerability research',
+        title: 'Front-End Developer',
+        description: 'React, Next.js, TypeScript',
         color: 'accent'
     },
     {
         icon: <Code />,
-        title: 'Software Developer',
-        description: 'Python, C++, JavaScript, Qt',
+        title: 'Team Player',
+        description: 'Agile Scrum, Jira, Collaboration',
         color: 'warning'
     }
 ]
@@ -99,12 +99,12 @@ function About() {
                                 </span>
                                 <br /><br />
                                 <span className={styles.outputSection}>
-                                    <span className={styles.outputKey}>Name:</span> Karthigaiselvam R<br />
-                                    <span className={styles.outputKey}>Role:</span> Security Researcher<br />
-                                    <span className={styles.outputKey}>Education:</span> B.E. CSE (Cyber Security)<br />
-                                    <span className={styles.outputKey}>College:</span> Chennai Institute of Technology<br />
-                                    <span className={styles.outputKey}>CGPA:</span> 9.05 / 10<br />
-                                    <span className={styles.outputKey}>Batch:</span> 2022 - 2026<br />
+                                    <span className={styles.outputKey}>Name:</span> Sok Bunleab<br />
+                                    <span className={styles.outputKey}>Role:</span> Flutter Developer Internship<br />
+                                    <span className={styles.outputKey}>Education:</span> B.E. Computer Science<br />
+                                    <span className={styles.outputKey}>College:</span> Cambodia Academy of Digital Technology (CADT)<br />
+                                    <span className={styles.outputKey}>Specialization:</span> Software Engineering<br />
+                                    <span className={styles.outputKey}>Batch:</span> 2024 - Present<br />
                                 </span>
                                 <br />
                                 <span className="terminal-line">
@@ -113,9 +113,8 @@ function About() {
                                 </span>
                                 <br /><br />
                                 <span className="terminal-output">
-                                    "Security is not a product,<br />
-                                    but a process."<br />
-                                    — Bruce Schneier
+                                    "Code is how I communicate ideas. I build with purpose and collaborate with heart."<br />
+                                    — Sok Bunleab
                                 </span>
                             </div>
                         </div>
@@ -127,8 +126,8 @@ function About() {
                             animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
                             transition={{ delay: 0.6 }}
                         >
-                            <span className={styles.expNumber}>3+</span>
-                            <span className={styles.expLabel}>Industry<br />Internships</span>
+                            <span className={styles.expNumber}>8+</span>
+                            <span className={styles.expLabel}>Academic<br />Projects</span>
                         </motion.div>
                     </motion.div>
 
@@ -145,7 +144,7 @@ function About() {
                                 About Me
                             </span>
                             <h2 className="section-title">
-                                <span className="gradient-text">Security Researcher &<br />Software Developer</span>
+                                <span className="gradient-text">Flutter Developer &<br />Software Engineering Student</span>
                             </h2>
                         </div>
 
@@ -156,7 +155,7 @@ function About() {
                             transition={{ delay: 0.5 }}
                         >
                             <p className={styles.bio}>
-                                I'm Karthigaiselvam R — a developer with a security-first mindset. Pursuing B.E. CSE (Cyber Security) at Chennai Institute of Technology with 9.05 CGPA. Completed 5 industry internships at Palo Alto Networks, RecruitNxt Technologies, THECYBERHOST, Learnflu & AirosSpace R&D — building expertise across mobile pentesting, cloud security & threat intelligence.
+                                I'm Sok Bunleab — a motivated individual with a strong interest in software development. Currently pursuing a Bachelor's Degree in Computer Science with a specialization in Software Engineering at the Cambodia Academy of Digital Technology (CADT). I have a solid foundation in software development and I am eager to contribute to real-world projects while continuously improving my technical and problem-solving skills.
                             </p>
                         </motion.div>
 

@@ -7,22 +7,22 @@ import styles from './Skills.module.css'
 // Skill data for mobile grid view
 const skillCategories = [
     {
-        id: 'security',
-        label: 'Cyber Security',
+        id: 'mobile',
+        label: 'Mobile Development',
         color: '#00ff88',
-        skills: ['Pentesting', 'Web App Security', 'Network Security', 'Malware Analysis', 'Reverse Engineering', 'Burp Suite', 'Metasploit', 'Nmap', 'Wireshark', 'Nessus']
+        skills: ['Flutter', 'Java', 'Dart', 'OOP', 'Provider', 'MVVM', 'State Management']
     },
     {
-        id: 'dev',
-        label: 'Development',
+        id: 'web',
+        label: 'Web Development',
         color: '#00d4ff',
-        skills: ['Python', 'C++', 'Go', 'Bash', 'JavaScript', 'React', 'Node.js', 'SQL', 'Solidity']
+        skills: ['HTML', 'CSS', 'JavaScript', 'React', 'TypeScript', 'Next.js', 'Express.js', 'NestJS', 'Node.js']
     },
     {
-        id: 'ops',
-        label: 'Ops & Tools',
+        id: 'tools',
+        label: 'Database & Tools',
         color: '#bd00ff',
-        skills: ['Linux', 'Git', 'Docker', 'Risk Management', 'Incident Response']
+        skills: ['MySQL', 'Firebase', 'Git', 'Figma', 'Jira', 'Agile Scrum', 'CI/CD']
     }
 ]
 

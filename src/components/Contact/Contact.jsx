@@ -46,19 +46,19 @@ const MessageCircle = () => (
 const socialLinks = [
     {
         name: 'GitHub',
-        url: 'https://github.com/Karthigaiselvam-R-official',
+        url: 'https://github.com/leap170505',
         icon: <Github />,
         color: 'primary'
     },
     {
         name: 'LinkedIn',
-        url: 'https://www.linkedin.com/in/karthigaiselvam-r-7b9197258/',
+        url: 'https://www.linkedin.com/in/sok-bunleab-9870ba381/',
         icon: <LinkedIn />,
         color: 'secondary'
     },
     {
         name: 'Email',
-        url: 'mailto:karthigaiselvamr.cs2022@gmail.com',
+        url: 'mailto:leap170505@gmail.com',
         icon: <Mail />,
         color: 'accent'
     },
@@ -119,10 +119,10 @@ function Contact() {
         setIsSubmitting(true)
 
         emailjs.sendForm(
-            'service_9z9ogh7',
-            'template_schoo5j',
+            import.meta.env.VITE_EMAILJS_SERVICE_ID || 'YOUR_SERVICE_ID',
+            import.meta.env.VITE_EMAILJS_TEMPLATE_ID || 'YOUR_TEMPLATE_ID',
             formRef.current,
-            'tu8byCu5xNqBawxIB'
+            import.meta.env.VITE_EMAILJS_PUBLIC_KEY || 'YOUR_PUBLIC_KEY'
         )
             .then((result) => {
                 showToast('Message sent successfully! I will get back to you soon.', 'success')
@@ -195,16 +195,21 @@ function Contact() {
                         </div>
 
                         <p className={styles.description}>
-                            I'm currently available for internships, freelance work, and full-time opportunities.
-                            Whether you need a security assessment, want to collaborate on a project,
-                            or just want to connect - feel free to reach out!
+                            I'm currently available for internship opportunities and collaborative projects.
+                            Whether you're looking for a Flutter developer or want to discuss a new idea, feel free to reach out!
                         </p>
 
                         <div className={styles.contactDetails}>
                             <div className={styles.detailItem}>
                                 <Mail />
-                                <a href="mailto:karthigaiselvamr.cs2022@gmail.com">
-                                    karthigaiselvamr.cs2022@gmail.com
+                                <a href="mailto:leap170505@gmail.com">
+                                    leap170505@gmail.com
+                                </a>
+                            </div>
+                            <div className={styles.detailItem}>
+                                <Phone />
+                                <a href="tel:+855967910210">
+                                    +855 967 910 210
                                 </a>
                             </div>
                         </div>

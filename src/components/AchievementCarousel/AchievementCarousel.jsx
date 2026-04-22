@@ -24,46 +24,40 @@ const CloseIcon = () => (
 const achievements = [
     {
         id: 0,
-        title: 'Hack4Purpose 2024',
-        place: 'Top 100 Winning Teams',
-        prize: 'National Level Recognition',
-        description: 'Developed Eco - G bricks, an Environment Sustainability solution creating eco-friendly bricks from plastic waste to reduce carbon emissions. Competed against 8500+ registered teams nationwide.',
+        title: 'Next.js Certification',
+        place: 'Professional Level',
+        prize: 'Completed Certification',
+        description: 'Achieved professional certification in Next.js, mastering server-side rendering, static site generation, and advanced web development patterns.',
         images: [
-            '/images/hack4purpose_1.png',
-            '/images/hack4purpose_2.png',
-            '/images/hack4purpose_3.png',
-            '/images/hack4purpose_4.png'
+            '/images/Certificate_Next_js.jpg'
         ],
-        link: 'https://www.linkedin.com/posts/karthigaiselvam-r-7b9197258_hello-everyone-i-am-thrilled-to-activity-7240367648004300802-xcs7',
+        link: '#',
         color: '#00ff88'
     },
     {
         id: 1,
-        title: 'IIIT-Delhi Pitch-Cafe 7.0',
-        place: 'First Runner-up (2nd)',
-        prize: '₹20,000 Cash Prize',
-        description: 'Pitched Eco - G bricks, an innovative solution utilizing plastic waste for eco-friendly construction. Recognized for its business viability and environmental impact.',
+        title: 'Khoding Hero 2024',
+        place: 'Trainer & Leader',
+        prize: 'Community Recognition',
+        description: 'Served as a trainer and lead for the Khoding Hero program, empowering students with coding skills and fostering a collaborative tech community.',
         images: [
-            '/images/pitchcafe_1.png',
-            '/images/pitchcafe_2.png',
-            '/images/pitchcafe_3.png'
+            '/images/Khoding_Hero.jpg',
+            '/images/Khoding_team.jpg'
         ],
-        link: 'https://www.linkedin.com/posts/karthigaiselvam-r-7b9197258_im-pleased-to-announce-that-our-team-achieved-activity-7240364228069441537-H7Wm',
+        link: '#',
         color: '#00d4ff'
     },
     {
         id: 2,
-        title: 'Y2E Ideathon',
-        place: 'First Runner-up (2nd)',
-        prize: '₹10,000 Cash Prize',
-        description: 'Presented Eco - G bricks as a sustainable entrepreneurial venture. Demonstrated how transforming plastic waste into construction material creates a scalable impact.',
+        title: 'Coding Championship & Training',
+        place: 'Participant & Flow Team',
+        prize: 'Achievement Badge',
+        description: 'Actively participated in the CADT Freshman Coding Championship (CFCC) and completed technical training programs like TDTS.',
         images: [
-            '/images/y2e_1.png',
-            '/images/y2e_2.png',
-            '/images/y2e_3.png',
-            '/images/y2e_4.png'
+            '/images/CFCC.jpg',
+            '/images/TDTS.jpg'
         ],
-        link: 'https://www.linkedin.com/posts/karthigaiselvam-r-7b9197258_entrepreneurship-cybersecurity-innovation-activity-7240362391954186240--oqp',
+        link: '#',
         color: '#bd00ff'
     }
 ]
