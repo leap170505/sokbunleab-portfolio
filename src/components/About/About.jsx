@@ -183,7 +183,7 @@ function About() {
 
                         <div style={{ display: 'flex', justifyContent: 'center', marginTop: '8px' }}>
                             <motion.a
-                                href="https://drive.google.com/file/d/1lXWJv1ttyhQlEEeKlDJYr1b7A33tFwye/view"
+                                href="https://drive.google.com/file/d/1Jc10snE6kQARJxQ5Ben73JY2Irw61R9n/view?usp=drive_link"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="btn btn-primary"
